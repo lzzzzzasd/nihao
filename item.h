@@ -12,6 +12,7 @@ private:
     std::string m_description;
     ItemType m_type;
     std::map<AttributeType, int> m_attributes;
+    //AttributeType表示属性
 
 public:
     Item(const std::string& name, const std::string& description, ItemType type)
@@ -39,7 +40,7 @@ public:
         std::cout << "类型: " << (int)m_type << std::endl;
         std::cout << "描述: " << m_description << std::endl;
         for (const auto& attr : m_attributes) {
-            std::cout << "属性(" << (int)attr.first << "): " << attr.second << std::endl;
+            std::cout << "属性(" << AttributeTypeToString(attr.first) << "): " << attr.second << std::endl;
         }
     }
 };

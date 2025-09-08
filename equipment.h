@@ -8,32 +8,32 @@ class Weapon {
 private:
     std::string m_name;
     EquipmentType m_type;
-    float m_attack_bonus;
-    float m_agility_bonus;
+    float m_attackBonus;
+    float m_agilityBonus;
 
 public:
     Weapon(const std::string& name, EquipmentType type, float attack, float agility = 0.0f)
-        : m_name(name), m_type(type), m_attack_bonus(attack), m_agility_bonus(agility) {
+        : m_name(name), m_type(type), m_attackBonus(attack), m_agilityBonus(agility) {
     }
 
     std::string GetName() const { return m_name; }
     EquipmentType GetType() const { return m_type; }
-    float GetAttackBonus() const { return m_attack_bonus; }
-    float GetAgilityBonus() const { return m_agility_bonus; }
+    float GetAttackBonus() const { return m_attackBonus; }
+    float GetAgilityBonus() const { return m_agilityBonus; }
 };
 
 class Armor {
 private:
     std::string m_name;
-    float m_defense_bonus;
+    float m_defenseBonus;
 
 public:
     Armor(const std::string& name, float defense)
-        : m_name(name), m_defense_bonus(defense) {
+        : m_name(name), m_defenseBonus(defense) {
     }
 
     std::string GetName() const { return m_name; }
-    float GetDefenseBonus() const { return m_defense_bonus; }
+    float GetDefenseBonus() const { return m_defenseBonus; }
 };
 
 #endif
